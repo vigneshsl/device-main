@@ -1,0 +1,6 @@
+{
+  "name": "Smart Network Alert",
+  "description": "Event-driven cellular generation monitor (5G/4G/3G/2G) with customizable acoustic alerts, debounce protection, and strict privacy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+      JUSTIFICATION FOR MANIFEST ENTRIES:
+      1. READ_PHONE_STATE: Required on Android 12+ (API 31+) by TelephonyCallback.DisplayInfoListener
+         to receive accurate 5G NSA / 5G mmWave override network types (OVERRIDE_NETWORK_TYPE_NR_NSA,
+         OVERRIDE_NETWORK_TYPE_NR_ADVANCED) and base data network types when carrier restrictions apply.
+      2. POST_NOTIFICATIONS: Required on Android 13+ (API 33+) to display the static foreground service
+         status notification and optional visual alert notifications.
+      3. FOREGROUND_SERVICE: Required to run NetworkMonitorService in the foreground while monitoring
+         is explicitly toggled ON by the user, preventing premature OS process termination.
+      4. FOREGROUND_SERVICE_SPECIAL_USE: Required on Android 14+ (API 34+) for continuous real-time
+         event-driven cellular state monitoring that does not fit media/location/health categories.
+      NOTE: No INTERNET, ACCESS_FINE_LOCATION, READ_CONTACTS, or READ_PHONE_NUMBERS permissions
+      are requested. All network telemetry remains strictly local on-device.
+    -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+
+    <!--
+      APPLICATION HARDENING:
+      - allowBackup="false": Prevents ADB backup extraction and cloud backup of local transition history.
+      - dataExtractionRules & fullBackupContent: Explicitly excludes all storage domains.
+      - usesCleartextTraffic="false": Enforces zero cleartext traffic at the OS network security policy level.
+    -->
+    <application
+        android:name="com.example.SmartNetworkApplication"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        android:usesCleartextTraffic="false"
+        android:networkSecurityConfig="@xml/network_security_config">
+
+        <!--
+          MainActivity: The sole exported component (exported="true") because it handles the
+          MAIN/LAUNCHER intent filter.
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+          NetworkMonitorService: Strictly non-exported (exported="false") so no external application
+          can bind to, start, or spoof intents to the cellular monitor service.
+          Uses foregroundServiceType="specialUse" with mandatory property explanation for Android 14/15.
+        -->
+        <service
+            android:name=".service.NetworkMonitorService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Continuous event-driven cellular network generation monitoring (5G/4G/3G/2G) via TelephonyCallback to trigger immediate user-configured acoustic alerts while the screen is off." />
+        </service>
+    </application>
+
+</manifest>

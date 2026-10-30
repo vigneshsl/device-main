@@ -1,0 +1,81 @@
+name: Android CI & Signed Release Build
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+# Minimal least-privilege token permissions
+permissions:
+  contents: read
+
+jobs:
+  build-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout Repository
+        # actions/checkout v4.2.2 pinned to commit SHA
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+
+      - name: Validate Gradle Wrapper
+        # gradle/actions/wrapper-validation v4.2.1 pinned to commit SHA
+        uses: gradle/actions/wrapper-validation@a2ab4ffd1eb9f21bbfde8f0c8f3eb39f21f99a18
+
+      - name: Set up JDK 17
+        # actions/setup-java v4.6.0 pinned to commit SHA
+        uses: actions/setup-java@c5195efecf7bdfc987ee8bae7a71cb8b11521c00
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Gradle Caching
+        # gradle/actions/setup-gradle v4.2.1 pinned to commit SHA
+        uses: gradle/actions/setup-gradle@f29f5a9d7b08a7c672985e2a89f01800bc2479b7
+
+      - name: Run Android Lint & Unit / Robolectric Tests
+        run: ./gradlew :app:lintDebug :app:testDebugUnitTest --stacktrace
+
+      - name: Assemble Debug APK
+        run: ./gradlew :app:assembleDebug --stacktrace
+
+      - name: Decode Release Keystore from CI Secrets (if configured) and Assemble Release APK
+        env:
+          KEYSTORE_BASE64: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
+          STORE_PASSWORD: ${{ secrets.RELEASE_STORE_PASSWORD }}
+          KEY_PASSWORD: ${{ secrets.RELEASE_KEY_PASSWORD }}
+        run: |
+          if [ -n "$KEYSTORE_BASE64" ]; then
+            echo "$KEYSTORE_BASE64" | base64 --decode > "${GITHUB_WORKSPACE}/my-upload-key.jks"
+            export KEYSTORE_PATH="${GITHUB_WORKSPACE}/my-upload-key.jks"
+            ./gradlew :app:assembleRelease --stacktrace
+            rm -f "${GITHUB_WORKSPACE}/my-upload-key.jks"
+          else
+            echo "RELEASE_KEYSTORE_BASE64 secret not set; generating ephemeral CI keystore for assembleRelease verification."
+            keytool -genkeypair -v \
+              -keystore "${GITHUB_WORKSPACE}/my-upload-key.jks" \
+              -alias upload \
+              -keyalg RSA -keysize 2048 -validity 10000 \
+              -storepass "ci_ephemeral_pass" \
+              -keypass "ci_ephemeral_pass" \
+              -dname "CN=SmartNetworkAlert, OU=Security, O=App, L=City, S=State, C=US"
+            export KEYSTORE_PATH="${GITHUB_WORKSPACE}/my-upload-key.jks"
+            export STORE_PASSWORD="ci_ephemeral_pass"
+            export KEY_PASSWORD="ci_ephemeral_pass"
+            ./gradlew :app:assembleRelease --stacktrace
+            rm -f "${GITHUB_WORKSPACE}/my-upload-key.jks"
+          fi
+
+      - name: Upload Built APKs as Artifacts
+        # actions/upload-artifact v4.5.0 pinned to commit SHA
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: smart-network-alert-apks
+          path: |
+            app/build/outputs/apk/debug/*.apk
+            app/build/outputs/apk/release/*.apk
+          if-no-files-found: error
+          retention-days: 14
