@@ -1,0 +1,392 @@
+# GEMINI MASTER PROMPT — IMPLEMENT THIS EXACT UI DESIGN
+
+You are a Senior Android UI/UX Designer and Kotlin Jetpack Compose Engineer.
+
+I have attached my desired Smart Network Alert UI reference image.
+
+**Your task is to understand the attached image and implement its design in my EXISTING Android application.**
+
+Do not create a new project. Do not just describe the design. Modify the actual Kotlin source files.
+
+## 1. VISUAL DESIGN — FOLLOW THE REFERENCE
+
+Recreate the attached design as closely as practical.
+
+Design identity:
+
+- Premium Apple-inspired mobile UI.
+- Clean white and soft off-white backgrounds.
+- Magical light mint-green and lime-green accents.
+- Subtle glowing green borders.
+- Elegant rounded glass-style cards.
+- Soft shadows and delicate gradients.
+- Premium icons and refined typography.
+- Minimal, spacious and user-friendly layouts.
+- Smooth, lightweight animations.
+
+Avoid:
+
+- Black backgrounds.
+- Excessive technical information.
+- Unnecessary descriptions.
+- Too many cards.
+- Crowded layouts.
+- Monospaced text for normal content.
+- Heavy borders and excessive visual effects.
+
+## 2. FONT AND BILINGUAL LANGUAGE
+
+Tamil must be the primary communication language.
+
+Use this format throughout the application:
+
+Tamil heading first.\
+English heading immediately below it.
+
+Example:
+
+சிறந்த அறிவிப்பூர்வமான தொலைத்தொடர்பு அறிவிப்பு\
+Smart Network Alert
+
+Use a premium, modern, highly readable font combination.
+
+Recommended:
+
+- Tamil: Noto Sans Tamil.
+- English: Inter or a similar modern sans-serif family.
+
+Use appropriate font weights and sizes. Avoid Times New Roman, artificial robotic fonts, and italic text for normal content.
+
+All translations must be natural and meaningful Tamil, not machine-generated literal translations.
+
+Keep technical terms such as 5G, 4G, NR NSA, and SIM understandable.
+
+## 3. THREE MAIN SCREENS
+
+### Screen 1 — Monitor
+
+Tamil heading first, English below.
+
+Display only:
+
+- Current network generation (5G / 4G / 3G / 2G / Unknown).
+- Signal strength.
+- Default data SIM.
+- ONE Master Monitoring ON/OFF switch.
+- Latest actual network change.
+- Clear monitoring status.
+
+The network indicator should be the main visual centerpiece with a magical green glow.
+
+Monitoring ON must automatically activate network-change sound alerts. There must be no separate master Sound ON/OFF switch.
+
+### Screen 2 — Alerts & Audio
+
+Display only useful sound settings:
+
+- Default alert sound.
+- Selected sound name.
+- Sound preview button.
+- Volume slider.
+- Individual network transition sound configuration.
+- Debounce setting.
+
+Provide a built-in default sound. Allow users to select custom sounds.
+
+Do not add a separate master Sound ON/OFF switch.
+
+### Screen 3 — Diagnostics
+
+Display concise information:
+
+- Phone-state permission.
+- Notification permission.
+- Foreground-service status.
+- Current network.
+- Signal strength.
+- Default data SIM.
+- Battery optimization guidance.
+- Do Not Disturb guidance when detectable.
+
+Hide unnecessary technical explanations behind expandable details.
+
+## 4. BOTTOM NAVIGATION
+
+Create a premium floating bottom navigation bar:
+
+- Monitor
+- Alerts & Audio
+- Diagnostics
+
+Use minimalist icons, Tamil-first labels, smaller English subtitles, and magical-green selected-state highlighting.
+
+Ensure correct Android system navigation insets.
+
+## 5. DEVELOPER BRANDING
+
+Add subtle developer branding:
+
+SLV²-DEV-EngineT
+
+Powered by SLV²-DEV-EngineT\
+Crafted by Vignesh S.L.
+
+Do not display large branding on every screen. Put the full credits in the About section. If a small footer is used, keep it subtle.
+
+## 6. FUNCTIONAL REQUIREMENTS
+
+This is an existing working Android application.
+
+Preserve:
+
+- Real TelephonyManager callbacks.
+- Actual network-generation detection.
+- Signal strength reporting.
+- Default data subscription monitoring.
+- Foreground service.
+- Debounce and duplicate suppression.
+- Automatic sound alerts when monitoring is ON.
+- Default and custom sound selection.
+- DataStore settings.
+- Permissions and security.
+- Existing transition history.
+
+Do not use fake readings or mock production data.
+
+Do not break existing business logic to achieve the design.
+
+## 7. PERFORMANCE AND QUALITY
+
+- Use Kotlin and Jetpack Compose.
+- Use Material 3 and existing AndroidX dependencies.
+- No unnecessary third-party libraries.
+- Keep animations lightweight.
+- Avoid continuous animations and expensive blur effects.
+- Preserve battery-efficient event-driven monitoring.
+- Support TalkBack and 200% font scaling.
+- Maintain readable contrast and 48dp touch targets.
+- Support light and dark themes.
+
+## 8. IMPLEMENTATION PROCESS
+
+Follow this exact sequence:
+
+1. Inspect the entire existing project.
+2. Study the attached UI reference image.
+3. Identify the existing screen and theme files.
+4. Create a reusable premium design system.
+5. Implement the Monitor screen.
+6. Implement Alerts & Audio.
+7. Implement Diagnostics.
+8. Implement Tamil-first bilingual typography and text.
+9. Add developer branding.
+10. Connect every UI component to actual application state.
+11. Run the Gradle build, tests, and lint.
+12. Fix errors introduced by the changes.
+
+Modify the actual existing files. Do not merely provide screenshots, mockups, or sample code.
+
+## 9. FINAL VALIDATION
+
+Compare the implemented screens against the attached reference.
+
+Report:
+
+- Files modified.
+- UI improvements.
+- Functional behavior preserved.
+- Build results.
+- Test results.
+- Accessibility findings.
+- Remaining issues.
+
+Mark each verification as VERIFIED, FAILED, or NOT VERIFIED.
+
+Never claim that a build, test, or physical-device behavior works unless it has actually been verified.
+
+**FINAL GOAL:** Reproduce the visual language of my attached reference image in my existing Smart Network Alert app, with Tamil-first bilingual communication, premium white and magical-green styling, minimal information, elegant typography, and fully functional real Android features.
+
+
+
+# SMART NETWORK ALERT — NATURAL TAMIL LANGUAGE LOCALIZATION
+
+Act as a professional Tamil language editor, native Tamil UX writer, localization specialist, and Android UI developer.
+
+Improve the Tamil language throughout my existing Smart Network Alert Android application.
+
+## 1. LANGUAGE PRIORITY
+
+Tamil must be the primary user-facing language.
+
+English must appear immediately below the Tamil text wherever appropriate.
+
+Format:
+
+தமிழ் தலைப்பு\
+English Subtitle
+
+Example:
+
+நெட்வொர்க் கண்காணிப்பு\
+Network Monitoring
+
+## 2. TAMIL LANGUAGE QUALITY
+
+Use:
+
+- இயல்பான தமிழ்.
+- சரியான இலக்கணம்.
+- எளிமையான சொற்கள்.
+- தெளிவான வாக்கிய அமைப்பு.
+- அன்றாடப் பயன்பாட்டிற்கு ஏற்ற மொழிநடை.
+- தொழில்நுட்பம் தெரியாத பயனர்களும் புரிந்துகொள்ளக்கூடிய விளக்கங்கள்.
+
+STRICTLY AVOID:
+
+- Google Translate போன்ற நேரடி மொழிபெயர்ப்பு.
+- செயற்கையான தமிழ்.
+- கடினமான இலக்கியச் சொற்கள்.
+- தேவையற்ற நீண்ட வாக்கியங்கள்.
+- தவறான சொல் அமைப்பு.
+- தமிழ் மற்றும் ஆங்கிலச் சொற்களை இயல்பற்ற முறையில் கலப்பது.
+- ஒரே பொருளுக்கு வெவ்வேறு இடங்களில் வெவ்வேறு சொற்களைப் பயன்படுத்துவது.
+
+## 3. APPROVED UI TEXT EXAMPLES
+
+Use these natural Tamil translations consistently.
+
+| English               | Tamil                           |
+| --------------------- | ------------------------------- |
+| Smart Network Alert   | திறன்பேசி நெட்வொர்க் அறிவிப்பு  |
+| Monitor               | கண்காணிப்பு                     |
+| Network Monitoring    | நெட்வொர்க் கண்காணிப்பு          |
+| Monitoring ON         | கண்காணிப்பு இயக்கத்தில் உள்ளது  |
+| Monitoring OFF        | கண்காணிப்பு நிறுத்தப்பட்டுள்ளது |
+| Current Network       | தற்போதைய நெட்வொர்க்             |
+| Signal Strength       | சிக்னல் வலிமை                   |
+| Network Changed       | நெட்வொர்க் மாறியுள்ளது          |
+| Latest Network Change | சமீபத்திய நெட்வொர்க் மாற்றம்    |
+| Alerts & Audio        | ஒலி அறிவிப்புகள்                |
+| Default Alert Sound   | இயல்புநிலை அறிவிப்பு ஒலி        |
+| Select Sound          | ஒலியைத் தேர்ந்தெடுக்கவும்       |
+| Test Sound            | ஒலியைச் சோதிக்கவும்             |
+| Volume                | ஒலி அளவு                        |
+| Custom Sound          | விருப்பமான ஒலி                  |
+| Diagnostics           | செயல்பாட்டு நிலை                |
+| Battery Optimization  | மின்கலப் பயன்பாட்டு மேம்பாடு    |
+| Permission Required   | அனுமதி தேவை                     |
+| Running               | செயல்பாட்டில் உள்ளது            |
+| Stopped               | நிறுத்தப்பட்டுள்ளது             |
+| Unknown               | தெரியவில்லை                     |
+| Settings              | அமைப்புகள்                      |
+| Clear History         | வரலாற்றை அழிக்கவும்             |
+| No SIM                | SIM அட்டை இல்லை                 |
+| No Service            | நெட்வொர்க் சேவை இல்லை           |
+
+You may improve these translations where a more natural Tamil expression is appropriate. Keep technical terms such as 5G, 4G, SIM, NR NSA, and Android unchanged where necessary.
+
+## 4. USER-FRIENDLY ERROR MESSAGES
+
+Examples:
+
+No SIM:\
+SIM அட்டை கண்டறியப்படவில்லை.
+
+Permission denied:\
+தேவையான அனுமதி வழங்கப்படவில்லை. அமைப்புகளுக்குச் சென்று அனுமதி வழங்கவும்.
+
+No service:\
+தற்போது நெட்வொர்க் சேவை கிடைக்கவில்லை.
+
+Monitoring stopped:\
+நெட்வொர்க் கண்காணிப்பு நிறுத்தப்பட்டுள்ளது.
+
+Sound playback failure:\
+அறிவிப்பு ஒலியை இயக்க முடியவில்லை. தேர்ந்தெடுத்த ஒலியைச் சரிபார்க்கவும்.
+
+Do not display technical exception messages directly to ordinary users.
+
+## 5. TYPOGRAPHY
+
+Use a font combination that supports Tamil and English correctly.
+
+Preferred:
+
+- Tamil: Noto Sans Tamil.
+- English: Inter or a similar modern sans-serif.
+
+Requirements:
+
+- Clear Tamil letter shapes.
+- Proper Tamil character rendering.
+- Consistent baseline alignment.
+- Readable font sizes.
+- Medium and semibold weights for headings.
+- Regular weight for descriptions.
+- No unnecessary italic or decorative fonts.
+- Support font scaling up to 200%.
+
+Verify that Tamil glyphs do not appear broken, disconnected, clipped, or replaced with squares.
+
+## 6. BILINGUAL UI EXAMPLE
+
+நெட்வொர்க் கண்காணிப்பு\
+Network Monitoring
+
+உங்கள் நெட்வொர்க்கில் ஏற்படும் மாற்றங்களைக் கண்காணிக்கவும்.\
+Monitor changes in your cellular network.
+
+தற்போதைய நெட்வொர்க்\
+Current Network
+
+சிக்னல் வலிமை\
+Signal Strength
+
+சமீபத்திய மாற்றம்\
+Latest Change
+
+ஒலி அமைப்புகள்\
+Sound Settings
+
+இயல்புநிலை அறிவிப்பு ஒலி\
+Default Alert Sound
+
+## 7. IMPLEMENTATION
+
+- Inspect all existing Compose screens.
+- Identify every hardcoded user-facing string.
+- Move text into Android string resources.
+- Organize Tamil and English resources separately.
+- Preserve existing application functionality.
+- Do not modify network detection logic unnecessarily.
+- Ensure accessibility labels are also translated naturally.
+- Use consistent terminology throughout the application.
+
+Create:
+
+- `values/strings.xml` for English.
+- `values-ta/strings.xml` for Tamil.
+
+Do not put user-facing text directly into Kotlin source files when a string resource is appropriate.
+
+## 8. FINAL QUALITY CHECK
+
+Review every Tamil sentence as a native Tamil UX writer.
+
+Check:
+
+- Grammar.
+- Spelling.
+- Meaning.
+- Naturalness.
+- Technical accuracy.
+- Readability.
+- Consistency.
+
+Do not invent translations for technical concepts when they would confuse users.
+
+**FINAL REQUIREMENT: Every Tamil sentence must sound like it was originally written by a professional Tamil UX writer, not translated mechanically from English.**
+
+
+
+give the singla prompt
