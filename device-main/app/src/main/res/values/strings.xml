@@ -1,0 +1,182 @@
+<resources>
+    <!-- Locale-dependent system strings (Tamil overrides in values-ta) -->
+    <string name="app_name">Smart Network Alert</string>
+    <string name="back_button">Back</string>
+    <string name="fgs_channel_name">Network Monitor</string>
+    <string name="fgs_channel_desc">Shown while network monitoring is active</string>
+    <string name="fgs_notification_title">Smart Network Alert</string>
+    <string name="fgs_notification_text">Network monitoring is active (5G/4G/3G/2G)</string>
+    <string name="fgs_action_stop">Stop</string>
+
+    <!-- Fixed bilingual pairs: Tamil line first, English subtitle below, regardless of device locale -->
+    <string name="app_title_ta" translatable="false">சிறந்த அறிவிப்பூர்வமான தொலைத்தொடர்பு அறிவிப்பு</string>
+    <string name="app_name_en" translatable="false">Smart Network Alert</string>
+
+    <string name="nav_home_ta" translatable="false">மானிட்டர்</string>
+    <string name="nav_home" translatable="false">Monitor</string>
+    <string name="nav_settings_ta" translatable="false">அலர்ட் ஒலி</string>
+    <string name="nav_settings" translatable="false">Alerts &amp; Audio</string>
+    <string name="nav_diagnostics_ta" translatable="false">டயக்னோஸ்டிக்ஸ்</string>
+    <string name="nav_diagnostics" translatable="false">Diagnostics</string>
+
+    <string name="generation_label_current_ta" translatable="false">தற்போதைய நெட்வொர்க்</string>
+    <string name="generation_label_current" translatable="false">Current Network</string>
+    <string name="generation_unknown_ta" translatable="false">தெரியவில்லை</string>
+    <string name="hero_cd_format" translatable="false">தற்போதைய நெட்வொர்க் %1$s. Current network %1$s.</string>
+    <string name="pending_change_format" translatable="false">மாற்றம் உறுதிசெய்யப்படுகிறது \u2192 %1$s (%2$.1f s)</string>
+
+    <string name="signal_strength_title_ta" translatable="false">சிக்னல் வலிமை</string>
+    <string name="signal_strength_title" translatable="false">Signal Strength</string>
+    <string name="signal_cd_format" translatable="false">சிக்னல் வலிமை %1$d / 4. Signal strength %1$d of 4.</string>
+
+    <string name="sim_data_title_ta" translatable="false">சிம் (தரவு)</string>
+    <string name="sim_data_title" translatable="false">Data SIM</string>
+    <string name="sim_no_sim_ta" translatable="false">SIM அட்டை இல்லை</string>
+
+    <string name="monitor_toggle_label_ta" translatable="false">நெட்வொர்க் கண்காணிப்பு</string>
+    <string name="monitor_toggle_label" translatable="false">Network Monitoring</string>
+    <string name="monitor_toggle_sub_ta" translatable="false">மாற்றம் ஏற்பட்டால் உடனடி அறிவிப்பு</string>
+    <string name="monitor_toggle_sub" translatable="false">Auto alert on network change</string>
+    <string name="monitor_status_running_ta" translatable="false">இயக்கத்தில் உள்ளது</string>
+    <string name="monitor_status_running" translatable="false">Monitoring is Active</string>
+    <string name="monitor_status_stopped_ta" translatable="false">நிறுத்தப்பட்டுள்ளது</string>
+    <string name="monitor_status_stopped" translatable="false">Monitoring is Off</string>
+    <string name="monitor_status_permission_needed_ta" translatable="false">அனுமதி தேவை</string>
+    <string name="monitor_status_permission_needed" translatable="false">Permission Required</string>
+    <string name="grant_permission_cta_ta" translatable="false">அனுமதி வழங்கவும்</string>
+    <string name="grant_permission_cta" translatable="false">Grant Permission</string>
+
+    <string name="last_change_title_ta" translatable="false">கடைசி மாற்றம்</string>
+    <string name="last_change_title" translatable="false">Last Network Change</string>
+    <string name="last_change_cd_format" translatable="false">கடைசி மாற்றம் %1$s \u2192 %2$s. Network changed from %1$s to %2$s.</string>
+    <string name="last_change_none_ta" translatable="false">இதுவரை நெட்வொர்க் மாற்றம் எதுவும் பதிவாகவில்லை.</string>
+    <string name="last_change_none" translatable="false">No network change recorded yet.</string>
+    <string name="today_ta" translatable="false">இன்று</string>
+    <string name="today_en" translatable="false">Today</string>
+    <string name="direction_upgrade" translatable="false">மேம்பாடு / Upgrade</string>
+    <string name="direction_downgrade" translatable="false">இறக்கம் / Downgrade</string>
+
+    <string name="history_section_title_ta" translatable="false">நெட்வொர்க் மாற்ற வரலாறு</string>
+    <string name="history_section_title" translatable="false">Transition History</string>
+    <string name="history_clear_button_ta" translatable="false">வரலாற்றை அழிக்கவும்</string>
+    <string name="history_empty_state" translatable="false">Turn on monitoring to record real network changes.</string>
+
+    <!-- Guidance (Diagnostics) -->
+    <string name="guide_phone_title_ta" translatable="false">தொலைபேசி நிலை அனுமதி தேவை</string>
+    <string name="guide_phone_title" translatable="false">Phone State Permission Required</string>
+    <string name="guide_phone_body_ta" translatable="false">தேவையான அனுமதி வழங்கப்படவில்லை. அமைப்புகளுக்குச் சென்று அனுமதி வழங்கவும்.</string>
+    <string name="guide_phone_body" translatable="false">Needed to detect 5G / 4G / 3G / 2G changes. No personal data is read.</string>
+    <string name="guide_notif_title_ta" translatable="false">அறிவிப்பு அனுமதி</string>
+    <string name="guide_notif_title" translatable="false">Notification Permission</string>
+    <string name="guide_notif_body_ta" translatable="false">பின்னணியில் கண்காணிப்பு தொடர்ந்து செயல்பட அறிவிப்பு அனுமதி வழங்கவும்.</string>
+    <string name="guide_notif_body" translatable="false">Keeps background monitoring reliable.</string>
+    <string name="guide_airplane_title_ta" translatable="false">விமானப் பயன்முறை இயக்கத்தில் உள்ளது</string>
+    <string name="guide_airplane_title" translatable="false">Airplane Mode is On</string>
+    <string name="guide_no_service_title_ta" translatable="false">நெட்வொர்க் சேவை இல்லை</string>
+    <string name="guide_no_service_title" translatable="false">No SIM or No Service</string>
+    <string name="guide_no_service_body_ta" translatable="false">தற்போது நெட்வொர்க் சேவை கிடைக்கவில்லை.</string>
+    <string name="guide_no_service_body" translatable="false">Cellular service is currently unavailable.</string>
+    <string name="guide_dnd_title_ta" translatable="false">தொந்தரவு செய்ய வேண்டாம்</string>
+    <string name="guide_dnd_title" translatable="false">Do Not Disturb is On</string>
+    <string name="guide_dnd_body_ta" translatable="false">இந்த நிலையில் அறிவிப்பு ஒலி கேட்காமல் போகலாம்.</string>
+    <string name="guide_dnd_body" translatable="false">Alert sounds may be silenced.</string>
+
+    <!-- Rationale dialogs -->
+    <string name="rationale_phone_title" translatable="false">அனுமதி தேவை / Permission Required</string>
+    <string name="rationale_phone_body" translatable="false">உங்கள் நெட்வொர்க்கில் ஏற்படும் 5G / 4G / 3G / 2G மாற்றங்களைக் கண்டறிய தொலைபேசி நிலை அனுமதி தேவை. உங்கள் தொலைபேசி எண் அல்லது தனிப்பட்ட தகவல்கள் எதுவும் படிக்கப்படாது.\n\nPhone State permission is needed to detect 5G / 4G / 3G / 2G changes. No phone number or personal data is read.</string>
+    <string name="rationale_notification_title" translatable="false">அறிவிப்பு அனுமதி / Notification Permission</string>
+    <string name="rationale_notification_body" translatable="false">பின்னணியில் கண்காணிப்பு தொடர்ந்து செயல்பட ஒரு நிலையான அறிவிப்பு காட்டப்படும்.\n\nA quiet, static notification keeps monitoring running in the background.</string>
+    <string name="rationale_grant_button" translatable="false">அனுமதி வழங்கவும் / Grant</string>
+    <string name="rationale_cancel_button" translatable="false">பிறகு / Not Now</string>
+
+    <!-- Snackbar messages -->
+    <string name="msg_permission_denied" translatable="false">தேவையான அனுமதி வழங்கப்படவில்லை. அமைப்புகளுக்குச் சென்று அனுமதி வழங்கவும்.</string>
+    <string name="msg_notification_denied" translatable="false">கண்காணிப்பு இயக்கத்தில் உள்ளது. அறிவிப்பு அனுமதி வழங்கப்படவில்லை.</string>
+    <string name="msg_sound_imported" translatable="false">விருப்பமான ஒலி சேர்க்கப்பட்டது: %1$s</string>
+    <string name="msg_sound_rejected" translatable="false">அறிவிப்பு ஒலியை இயக்க முடியவில்லை. தேர்ந்தெடுத்த ஒலியைச் சரிபார்க்கவும்.</string>
+    <string name="msg_sound_removed" translatable="false">இயல்புநிலை அறிவிப்பு ஒலி பயன்படுத்தப்படுகிறது.</string>
+    <string name="msg_history_cleared" translatable="false">வரலாறு அழிக்கப்பட்டது.</string>
+
+    <!-- Alerts & Audio -->
+    <string name="settings_screen_title_ta" translatable="false">அலர்ட் ஒலி அமைப்புகள்</string>
+    <string name="settings_screen_title" translatable="false">Alerts &amp; Audio</string>
+    <string name="alert_sound_title_ta" translatable="false">அலர்ட் ஒலி</string>
+    <string name="alert_sound_title" translatable="false">Alert Sound</string>
+    <string name="settings_default_sound_name" translatable="false">Crystal Bell</string>
+    <string name="settings_default_badge" translatable="false">Default</string>
+    <string name="settings_custom_badge" translatable="false">Custom</string>
+    <string name="settings_select_sound_ta" translatable="false">ஒலியைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="settings_select_sound" translatable="false">Select Sound</string>
+    <string name="select_default_sound" translatable="false">Crystal Bell (இயல்புநிலை / Default)</string>
+    <string name="settings_custom_sound_pick" translatable="false">விருப்பமான ஒலி / Custom Sound (\u2264 2 MB)</string>
+    <string name="settings_custom_sound_remove" translatable="false">ஒலியை நீக்கவும் / Remove Custom Sound</string>
+    <string name="close_button" translatable="false">மூடு / Close</string>
+
+    <string name="settings_volume_title_ta" translatable="false">ஒலி அளவு</string>
+    <string name="settings_volume_title" translatable="false">Volume</string>
+    <string name="volume_cd_format" translatable="false">ஒலி அளவு %1$d சதவீதம். Volume %1$d percent.</string>
+    <string name="settings_test_sound_title_ta" translatable="false">ஒலியைச் சோதிக்கவும்</string>
+    <string name="settings_test_sound_title" translatable="false">Test Sound</string>
+
+    <string name="settings_transitions_title_ta" translatable="false">நெட்வொர்க் மாற்றங்களுக்கு அலர்ட்</string>
+    <string name="settings_transitions_title" translatable="false">Alert for Network Changes</string>
+    <string name="transitions_show_all" translatable="false">அனைத்து மாற்றங்களும் / All Transitions (%1$d)</string>
+    <string name="transitions_show_primary" translatable="false">முக்கிய மாற்றங்கள் மட்டும் / Main Transitions</string>
+    <string name="rule_enabled" translatable="false">இயக்கத்தில் உள்ளது / On \u2014 tap to turn off</string>
+    <string name="rule_disabled" translatable="false">நிறுத்தப்பட்டுள்ளது / Off \u2014 tap to turn on</string>
+    <string name="test_tone_cd_format" translatable="false">%1$s ஒலியைச் சோதிக்கவும். Test sound for %1$s.</string>
+
+    <string name="settings_debounce_title_ta" translatable="false">நிலைப்படுத்தல் நேரம்</string>
+    <string name="settings_debounce_label" translatable="false">Stabilization delay: %1$.1f s</string>
+    <string name="debounce_cd_format" translatable="false">நிலைப்படுத்தல் நேரம் %1$.1f வினாடி. Debounce %1$.1f seconds.</string>
+    <string name="settings_haptic_label_ta" translatable="false">அதிர்வு அறிவிப்பு</string>
+    <string name="settings_haptic_label" translatable="false">Vibrate on Alert</string>
+    <string name="settings_recovery_sound_label_ta" translatable="false">மேம்பாட்டு ஒலி (4G \u2192 5G)</string>
+    <string name="settings_recovery_sound_label" translatable="false">Recovery Sound on Upgrade</string>
+
+    <!-- Diagnostics -->
+    <string name="diagnostics_screen_title_ta" translatable="false">சாதன நிலை</string>
+    <string name="diagnostics_screen_title" translatable="false">Diagnostics</string>
+    <string name="diag_network_title_ta" translatable="false">நெட்வொர்க் நிலை</string>
+    <string name="diag_network_title" translatable="false">Current Network</string>
+    <string name="diag_signal_title_ta" translatable="false">சிக்னல் வலிமை</string>
+    <string name="diag_signal_title" translatable="false">Signal Strength</string>
+    <string name="diag_sim_title_ta" translatable="false">தரவு சிம்</string>
+    <string name="diag_sim_title" translatable="false">Data SIM</string>
+    <string name="diag_service_title_ta" translatable="false">சேவை நிலை</string>
+    <string name="diag_service_title" translatable="false">Service Status</string>
+    <string name="diag_battery_title_ta" translatable="false">பேட்டரி மேம்படுத்தல்</string>
+    <string name="diag_battery_title" translatable="false">Battery Optimization</string>
+
+    <string name="status_running" translatable="false">Running</string>
+    <string name="status_stopped" translatable="false">Stopped</string>
+    <string name="status_normal" translatable="false">Normal</string>
+    <string name="status_unrestricted" translatable="false">Unrestricted</string>
+    <string name="status_granted" translatable="false">வழங்கப்பட்டுள்ளது / Granted</string>
+    <string name="status_required" translatable="false">அனுமதி தேவை / Required</string>
+    <string name="status_recommended" translatable="false">பரிந்துரைக்கப்படுகிறது / Recommended</string>
+    <string name="status_dnd_on" translatable="false">இயக்கத்தில் உள்ளது / On</string>
+    <string name="status_dnd_off" translatable="false">இயல்பானது / Off</string>
+
+    <string name="diag_tip_title_ta" translatable="false">குறிப்பு</string>
+    <string name="diag_tip_title" translatable="false">Tip</string>
+    <string name="diag_tip_body_ta" translatable="false">சாதனம் சீராகச் செயல்பட இந்த அமைப்புகளை அப்படியே வைத்திருக்கவும்.</string>
+    <string name="diag_tip_body" translatable="false">Keep these settings as they are for smooth operation.</string>
+
+    <string name="details_show" translatable="false">அனுமதி மற்றும் விவரங்கள் / Permissions &amp; Details</string>
+    <string name="details_hide" translatable="false">விவரங்களை மறை / Hide Details</string>
+    <string name="permissions_title_ta" translatable="false">அனுமதிகள்</string>
+    <string name="permissions_title" translatable="false">Permissions</string>
+    <string name="refresh_button" translatable="false">புதுப்பி / Refresh</string>
+    <string name="perm_phone_label" translatable="false">தொலைபேசி நிலை / Phone State</string>
+    <string name="perm_notif_label" translatable="false">அறிவிப்புகள் / Notifications</string>
+    <string name="dnd_label" translatable="false">தொந்தரவு செய்ய வேண்டாம் / Do Not Disturb</string>
+    <string name="battery_open_settings_btn" translatable="false">பேட்டரி அமைப்புகளைத் திற / Open Battery Settings</string>
+    <string name="about_title" translatable="false">பற்றி / About</string>
+
+    <!-- Developer Branding -->
+    <string name="dev_brand_short" translatable="false">SLV\u00B2-DEV-EngineT</string>
+    <string name="dev_brand_footer" translatable="false">Powered by SLV\u00B2-DEV-EngineT | Crafted by Vignesh S.L.</string>
+    <string name="dev_brand_powered" translatable="false">Powered by SLV\u00B2-DEV-EngineT</string>
+    <string name="dev_brand_crafted" translatable="false">Crafted by Vignesh S.L.</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">திறன்பேசி நெட்வொர்க் அறிவிப்பு</string>
+    <string name="back_button">பின்செல்</string>
+    <string name="fgs_channel_name">நெட்வொர்க் கண்காணிப்பு</string>
+    <string name="fgs_channel_desc">நெட்வொர்க் கண்காணிப்பு இயக்கத்தில் இருக்கும்போது காட்டப்படும்</string>
+    <string name="fgs_notification_title">திறன்பேசி நெட்வொர்க் அறிவிப்பு</string>
+    <string name="fgs_notification_text">நெட்வொர்க் கண்காணிப்பு இயக்கத்தில் உள்ளது (5G/4G/3G/2G)</string>
+    <string name="fgs_action_stop">நிறுத்து</string>
+</resources>
